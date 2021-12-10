@@ -12,7 +12,7 @@ export const journalState = {
             id: '-MoYuPkrHO0Vhd7SNvXM',
             date : 1636985035886,
             picture : "https://res.cloudinary.com/evelynsl/image/upload/v1636985061/burp7wc8mg0nnxqdp6hj.jpg",
-            text : "Hola mundo "
+            text : "Hola vue "
         }
     ]
 }
