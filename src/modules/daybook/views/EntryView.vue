@@ -137,7 +137,7 @@ export default {
 
          async saveEntry() {
 
-             new Swal({
+             Swal.fire({
                  title: 'Espere por favor',
                  allowOutsideClick: false
              })
@@ -181,8 +181,8 @@ export default {
                 Swal.showLoading()
 
                 console.log('Apunto de eliminar')
-                // await this.deleteEntry(this.entry.id)
-                // this.$router.push({name: 'no-entry'})
+                await this.deleteEntry(this.entry.id)
+                this.$router.push({name: 'no-entry'})
 
                 Swal.fire('Eliminado', '', 'success')
             }
