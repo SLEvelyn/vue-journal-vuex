@@ -163,7 +163,7 @@ export default {
         },
 
         async onDeleteEntry() {
-
+            console.log('se llamo aqui')
             const {isConfirmed} = await Swal.fire({
                 title: 'Está seguro',
                 text: 'Una vez borrado, no se puede recuperar',
@@ -171,14 +171,18 @@ export default {
                 confirmButtonText: 'Si, estoy seguro'
             })
 
+            console.log({isConfirmed})
+
             if(isConfirmed) {
-                new Swal ({
+                Swal.fire({
                     title: 'Espere por favor',
                     allowOutsideClick: false
                 })
                 Swal.showLoading()
-                await this.deleteEntry(this.entry.id)
-                this.$router.push({name: 'no-entry'})
+
+                console.log('Apunto de eliminar')
+                // await this.deleteEntry(this.entry.id)
+                // this.$router.push({name: 'no-entry'})
 
                 Swal.fire('Eliminado', '', 'success')
             }
